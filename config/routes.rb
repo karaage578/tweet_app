@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   
   get "/" => "home#top"
   get "about" => "home#about"
+  
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: "/sidekiq"
 end
