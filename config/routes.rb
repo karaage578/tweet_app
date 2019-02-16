@@ -1,3 +1,6 @@
+require 'sidekiq/web'
+require 'sidekiq-scheduler/web'
+
 Rails.application.routes.draw do
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
@@ -7,7 +10,6 @@ Rails.application.routes.draw do
   
   get "/" => "home#top"
   get "about" => "home#about"
-  
-  require 'sidekiq/web'
+
   mount Sidekiq::Web, at: "/sidekiq"
 end
