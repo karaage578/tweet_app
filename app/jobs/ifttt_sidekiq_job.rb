@@ -1,8 +1,7 @@
-
 class IftttSidekiqJob < ApplicationJob
   queue_as :default
 
-  def self.perform
+  def perform
     require "net/http"
     require "json"
     require "uri"
@@ -14,5 +13,4 @@ class IftttSidekiqJob < ApplicationJob
         "value3": "http://localhost:3000/posts/index"
     }.to_json, "Content-Type" => "application/json")
   end
-  perform
 end

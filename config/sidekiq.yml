@@ -1,5 +1,4 @@
-:concurrency: 3
-:pidfile: ./tmp/pids/sidekiq.pid
-:logfile: ./log/sidekiq.log
-:queues:
-  - default
+:schedule:
+  ifttt_sidekiq:
+    every: 120m
+    class: IftttSidekiqJob
