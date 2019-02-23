@@ -24,3 +24,4 @@ test:
 production:
   <<: *default
   database: tweet_app_pro
+  url: <%= ENV['DATABASE_URL'] %>
