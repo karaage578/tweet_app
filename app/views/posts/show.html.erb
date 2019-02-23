@@ -2,10 +2,23 @@
   <div class="container">
     <div class="posts-show-item">
       <p>
+        <strong>タイトル:</strong>
+        <%= @post.title %>
+      </p>
+      <p>
+        <strong>内容:</strong><br>
         <%= @post.content %>
+      </p>
+      <p>
+      <strong>URL:</strong>
+        <%= @post.url %>
       </p>
       <div class="post-time">
         <%= @post.created_at %>
+      </div>
+      <div class="post-menus">
+        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+        <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
       </div>
     </div>
   </div>

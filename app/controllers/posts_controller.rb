@@ -7,12 +7,32 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(content: params[:content])
+    @post = Post.new(title: params[:title],content: params[:content],url: params[:url])
     @post.save
     redirect_to("/posts/index")
   end
 
   def show
     @post = Post.find_by(id: params[:id])
+  end
+
+  def edit
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def update
+    @post = Post.find_by(id: params[:id])
+    @post.title = params[:title]
+    @post.content = params[:content]
+    @post.url = params[:url]
+    @post.save
+    redirect_to("/posts/index")
+  end
+
+  def destroy
+    # destroyアクションの中身を作成してください
+    @post = Post.find_by(id: params[:id])
+    @post.destroy
+    redirect_to("/posts/index")
   end
 end

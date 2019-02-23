@@ -4,7 +4,12 @@
     <%= form_tag("/posts/create") do %>
       <div class="form">
         <div class="form-body">
+        <p>タイトル</p>
+          <textarea name="title"></textarea>
+          <p>内容</p>
           <textarea name="content"></textarea>
+          <p>URL</p>
+          <textarea name="url"></textarea>
           <input type="submit" value="投稿">
         </div>
       </div>
