@@ -28,5 +28,5 @@ production:
   username: khdsanvifvized
   password: bb85a20d969b64e0fdc0f2425af7053fa0eea862a756e5b2f855da5f7dc9fbf2
   host: ec2-107-21-224-76.compute-1.amazonaws.com
-  database: tweet_app_pro
+  database: d2o7t81jsr31su
   url: <%= ENV['DATABASE_URL'] %>
