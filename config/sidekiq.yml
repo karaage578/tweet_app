@@ -1,5 +1,5 @@
 :dynamic: true
-:enabled:
+:enabled: true
 :schedule:
   ifttt_sidekiq:
     every: 2m
