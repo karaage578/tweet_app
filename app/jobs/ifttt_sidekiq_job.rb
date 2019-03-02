@@ -1,5 +1,3 @@
-require 'sidekiq-scheduler'
-
 class IftttSidekiqJob < ApplicationJob
   queue_as :default
 
