@@ -1,4 +1,4 @@
 :schedule:
   ifttt_sidekiq:
-    every: 29m
+    every: 2m
     class: IftttSidekiqJob
