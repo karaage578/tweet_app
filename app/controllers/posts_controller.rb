@@ -1,9 +1,12 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user
+  
   def index
-    @posts = Post.all.order(update_at_at: :desc)
+    @posts = Post.all.order(created_at: :desc)
   end
 
   def new
+    @post = Post.new
   end
 
   def create
@@ -33,7 +36,7 @@ class PostsController < ApplicationController
       flash[:notice] = "投稿を編集しました"
       redirect_to("/posts/index")
     else
-      render("/posts/#{@post.id}/edit")
+      render("/posts/edit")
     end
   end
 
