@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.all.order(update_at_at: :desc)
   end
 
   def new
@@ -8,8 +8,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(title: params[:title],content: params[:content],url: params[:url])
-    @post.save
-    redirect_to("/posts/index")
+    if @post.save
+      flash[:notice] = "投稿を作成しました"
+      redirect_to("/posts/index")
+    else
+      render("posts/new")
+    end
   end
 
   def show
@@ -25,14 +29,18 @@ class PostsController < ApplicationController
     @post.title = params[:title]
     @post.content = params[:content]
     @post.url = params[:url]
-    @post.save
-    redirect_to("/posts/index")
+    if @post.save
+      flash[:notice] = "投稿を編集しました"
+      redirect_to("/posts/index")
+    else
+      render("/posts/#{@post.id}/edit")
+    end
   end
 
   def destroy
-    # destroyアクションの中身を作成してください
     @post = Post.find_by(id: params[:id])
     @post.destroy
+    flash[:notice] = "投稿を削除しました"
     redirect_to("/posts/index")
   end
 end

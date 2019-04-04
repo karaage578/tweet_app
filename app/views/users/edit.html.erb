@@ -1,0 +1,22 @@
+<div class="main users-edit">
+  <div class="container">
+    <div class="form-heading">アカウント編集</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        
+        <%= form_tag("/users/#{@user.id}/update") do %>
+          <p>ユーザー名</p>
+          <input name="user_id" value="<%= @user.user_id %>">
+          <p>メールアドレス</p>
+          <input name="email" value="<%= @user.email %>">
+          <%= f.submit "保存", date: {conform: "保存してもいいですか？", disable_with: "処理中..."} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

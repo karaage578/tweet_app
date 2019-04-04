@@ -10,7 +10,7 @@
           <textarea name="content"><%= @post.content %></textarea>
           <p>URL</p>
           <textarea name="url"><%= @post.url %></textarea>
-          <input type="submit" value="保存">
+          <%= f.submit "保存", date: {conform: "保存してもいいですか？", disable_with: "処理中..."} %>
         </div>
       </div>
     <% end %>
