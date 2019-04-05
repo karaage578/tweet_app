@@ -1,4 +1,3 @@
-<!-- どのページでも表示したいHTMLはapplication.html.erbに書いておく -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,15 +9,11 @@
   </head>
 
   <body>
-    <!-- ここにヘッダーを書いてください -->
     <header>
       <div class="header-logo">
         <%= link_to("Notify-Push", "/") %>
       </div>
       <ul class="header-menus">
-        <li>
-          <%= link_to("投稿一覧", "/posts/index") %>
-        </li>
         <li>
           <%= link_to("新規投稿", "/posts/new") %>
         </li>

@@ -23,4 +23,12 @@ ActiveRecord::Schema.define(version: 2019_02_16_111709) do
     t.string "url"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "user_id"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "password"
+  end
+
 end
