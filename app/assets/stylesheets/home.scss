@@ -148,11 +148,13 @@ header {
 
 .top-img {
   display: flex;
+  text-align: center;
+  padding:10px 0;
 }
 
 .top-png {
   max-width: 100px;
-  height: auto;
+  max-height: 100px;
 }
 
 /* about ================================ */
