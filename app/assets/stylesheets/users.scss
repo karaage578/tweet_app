@@ -88,21 +88,16 @@
   .user p {
     font-size: 17px;
     margin-bottom: 15px;
+    text-align: left;
   }
   
   .user a {
     color: #005f23;
     text-decoration: underline;
     font-weight: 400;
+    text-align: right;
   }
-  .post-info {
-    float: left;
-  }
-  
-  .post-menu {
-    float: right;
-  }
-  
+
   .user span {
     color: #afb6bf;
     font-weight: 200;
