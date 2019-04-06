@@ -1,4 +1,4 @@
 :schedule:
   ifttt_sidekiq:
-    every: 30m
+    cron: '0 0 7-20 * * *' 
     class: IftttSidekiqJob
