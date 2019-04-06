@@ -10,7 +10,7 @@
           <textarea name="content"></textarea>
           <p>URL</p>
           <input name="url">
-          <input type="submit" value="投稿">
+          <%= submit_tag "投稿", data: { confirm: "投稿を作成しますか？" }  %>
         </div>
       </div>
     <% end %>
