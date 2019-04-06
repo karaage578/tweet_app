@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     def new
     end
 
-    def crete
+    def create
         @user = User.new(user_id: params[:user_id], email: params[:email], password: params[:password])
         if @user.save
             session[:user_id] = @user.id
