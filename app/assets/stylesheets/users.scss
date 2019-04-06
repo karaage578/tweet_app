@@ -68,7 +68,7 @@
     background-image: url("/user_show.jpg");
   }
   
-  .user {
+  .user-info {
     padding: 30px;
     background-color: rgba(255,255,255,0.4);
     color: #000000;
@@ -76,7 +76,7 @@
     overflow: hidden;
   }
   
-  .user img {
+  .user-info img {
     width: 80px;
     height: 80px;
     border-radius: 40%;
@@ -85,20 +85,20 @@
     object-fit: cover;
   }
   
-  .user p {
+  .user-info p {
     font-size: 17px;
     margin-bottom: 15px;
-    text-align: left;
+    float: left;
   }
   
-  .user a {
+  .user-info a {
     color: #005f23;
     text-decoration: underline;
     font-weight: 400;
-    text-align: right;
+    float: right;
   }
 
-  .user span {
+  .user-info span {
     color: #afb6bf;
     font-weight: 200;
     padding: 0 6px 0 8px;
