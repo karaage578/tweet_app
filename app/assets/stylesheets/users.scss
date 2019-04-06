@@ -14,17 +14,9 @@
     background-size: cover;
     background-image: url("/user_index.jpg");
 }
-
-.users-heading {
-    font-weight: 300;
-    margin: 60px 0 20px;
-    font-size: 48px;
-    color: #fffafa;
-  }
-  
   .users-index-item {
     padding: 20px 30px;
-    background-color: white;
+    background-color: rgba(255,255,255,0.4);
     overflow: hidden;
     box-shadow: 0 2px 6px #c1ced7;
     display: table;
@@ -78,7 +70,11 @@
   }
   
   .user {
-    margin-bottom: 20px;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.4);
+    color: #000000;
+    box-shadow: 0 2px 6px #c1ced7;
+    overflow: hidden;
   }
   
   .user img {
@@ -105,6 +101,10 @@
     color: #005f23;
     text-decoration: underline;
     font-weight: 400;
+  }
+  
+  .post-menus {
+    float: right;
   }
   
   .user span {
@@ -168,10 +168,33 @@
     background-repeat: no-repeat;
     background-position: center 50%;
     background-size: cover;
-    background-image: url("/user_new.jpg");
+    background-image: url("/user_edit.jpg");
+  }
+
+  .form-heading {
+    font-weight: 300;
+    margin: 60px 0 20px;
+    font-size: 55px;
+    color: #e3ebfff2;
+  }
+
+  .form-body {
+    background-color: rgba(80, 109, 123, 0.4);
+    color: #0a2061;
   }
 
   .users-form input {
     margin-bottom: 15px;
   }
   
+  .form input[type="submit"] {
+    background-color: rgba(6, 82, 138, 0.6);
+    color: white;
+    cursor: pointer;
+    font-weight: 300;
+    width: 120px;
+    border-radius: 2px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    float: right;
+  }
