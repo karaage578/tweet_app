@@ -47,7 +47,7 @@
   .user-right {
     width: 90%;
     padding-left: 25px;
-    text-align: left;
+    text-align: center;
     display: table-cell;
     vertical-align: middle;
   }
@@ -55,7 +55,7 @@
   /* users/show ================================ */
   .user-show {
     padding: 200px 0 100px;
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 0;
     width: 100%;
@@ -84,12 +84,6 @@
     box-shadow: 0 2px 6px #c1ced7;
     margin: 20px 0 10px;
     object-fit: cover;
-  }
-  
-  .user h2 {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.2;
   }
   
   .user p {
@@ -185,6 +179,7 @@
 
   .users-form input {
     margin-bottom: 15px;
+    color: #001035;
   }
   
   .form input[type="submit"] {

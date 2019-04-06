@@ -2,12 +2,12 @@
   <div class="container">
     <div class="user">
       <p>
-        <strong>Uesr_ID</strong>
-        <h2><%= @user.user_id %></h2>
+        <strong>Uesr_ID:</strong>
+        <%= @user.user_id %>
       </p>
       <p>
-        <strong>Email</strong>
-        <h2><%= @user.email %></h2>
+        <strong>Email:</strong>
+        <%= @user.email %>
       </p>
       <div class="user-menu">
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
