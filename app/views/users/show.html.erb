@@ -4,12 +4,14 @@
       <p>
         <strong>Uesr_ID:</strong>
         <%= @user.user_id %>
-      </p><br>
+      </p>
       <p>
         <strong>Email:</strong>
         <%= @user.email %>
-      </p><br>
+      </p>
+      <div class="user-menu">
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
+      </div>
     </div>
   </div>
 </div>

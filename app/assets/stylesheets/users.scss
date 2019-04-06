@@ -88,20 +88,22 @@
   .user-info p {
     font-size: 17px;
     margin-bottom: 15px;
-    float: left;
   }
   
   .user-info a {
     color: #005f23;
     text-decoration: underline;
     font-weight: 400;
-    float: right;
   }
 
   .user-info span {
     color: #afb6bf;
     font-weight: 200;
     padding: 0 6px 0 8px;
+  }
+
+  .user-menu {
+    float: right;
   }
   
   .user-tabs {
