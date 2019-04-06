@@ -180,9 +180,9 @@ header {
 
 /* フォーム================================ */
 .form {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
-  background-color: white;
+  background-color: rgba(255,255,255,0.4);
   box-shadow: 0 2px 6px #c1ced7;
 }
 
@@ -219,7 +219,7 @@ header {
 }
 
 .form input[type="submit"] {
-  background-color: rgba(148, 4, 9, 0.6);
+  background-color: #3ecdc6;
   color: white;
   cursor: pointer;
   font-weight: 300;
