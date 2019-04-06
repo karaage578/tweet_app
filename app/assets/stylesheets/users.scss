@@ -55,7 +55,6 @@
   /* users/show ================================ */
   .user-show {
     padding: 200px 0 100px;
-    text-align: left;
     position: absolute;
     top: 0;
     width: 100%;
@@ -95,6 +94,9 @@
     color: #005f23;
     text-decoration: underline;
     font-weight: 400;
+  }
+  .post-info {
+    float: left;
   }
   
   .post-menus {
