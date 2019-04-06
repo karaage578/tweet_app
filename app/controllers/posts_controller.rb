@@ -23,7 +23,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    sleep 3
     @post = Post.find_by(id: params[:id])
     @post.title = params[:title]
     @post.content = params[:content]
