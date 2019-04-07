@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
     def set_current_user
         @current_user = User.find_by(id: session[:login_user_id])
     end
-    
+
     def authenticate_user
         if @current_user == nil
           flash[:notice] = "ログインが必要です"
@@ -16,5 +16,5 @@ class ApplicationController < ActionController::Base
           flash[:notice] = "すでにログインしています"
           redirect_to("/posts/index")
         end
-      end
+    end
 end
