@@ -14,24 +14,30 @@
         <%= link_to("Notify-Push", "/") %>
       </div>
       <ul class="header-menus">
-        <li>
-          <%= link_to("Notify-Pushとは", "/about") %>
-        </li>
-        <li>
-          <%= link_to("配信一覧", "/posts/index") %>
-        </li>
-        <li>
-          <%= link_to("新規投稿", "/posts/new") %>
-        </li>
-        <li>
-          <%= link_to("ユーザ一覧", "/users/index") %>
-        </li>
-        <li>
-          <%= link_to("新規登録", "/signup") %>
-        </li>
-        <li>
-          <%= link_to("ログイン", "/login") %>
-        </li>
+        <% if session[:login_user_id] %>
+          <li>
+            現在ログインしているユーザーのid:
+            <%= session[:login_user_id] %>
+          </li>
+          <li>
+            <%= link_to("新規投稿", "/posts/new") %>
+          </li>
+          <li>
+            <%= link_to("ユーザ一覧", "/users/index") %>
+          </li>
+          <li>
+            <%= link_to("新規登録", "/signup") %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to("Notify-Pushとは", "/about") %>
+          </li>
+          <li>
+            <%= link_to("配信一覧", "/posts/index") %>
+          </li>
+          <li>
+            <%= link_to("ログイン", "/login") %>
+          </li>
       </ul>
     </header>
 

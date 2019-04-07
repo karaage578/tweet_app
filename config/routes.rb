@@ -4,6 +4,7 @@ require 'sidekiq-scheduler/web'
 Rails.application.routes.draw do
   get "login" => "users#login_form"
   post "login" => "users#login"
+  post "logout" => "users#logout"
 
   post "users/:id/update" => "users#update"
   get "users/:id/edit" => "users#edit"
