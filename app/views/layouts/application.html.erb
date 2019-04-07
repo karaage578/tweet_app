@@ -11,13 +11,16 @@
   <body>
     <header>
       <div class="header-logo">
-        <%= link_to("Notify-Push", "/") %>
+        <% if @current_user %>
+          <%= link_to("Notify-Push", "/about") %>
+        <% else %>
+          <%= link_to("Notify-Push", "/") %>
+        <% end %>
       </div>
       <ul class="header-menus">
-        <% if session[:login_user_id] %>
+        <% if current_user %>
           <li>
-            現在ログインしているユーザーのid:
-            <%= session[:login_user_id] %>
+            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
           </li>
           <li>
             <%= link_to("新規投稿", "/posts/new") %>
@@ -38,6 +41,7 @@
           <li>
             <%= link_to("ログイン", "/login") %>
           </li>
+        <% end %>
       </ul>
     </header>
 
