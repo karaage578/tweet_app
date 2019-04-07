@@ -14,6 +14,11 @@
         <%= link_to("Notify-Push", "/") %>
       </div>
       <ul class="header-menus">
+        <% if session[:user_id] %>
+          <li>
+            <%= session[:user_id] %>
+          </li>
+        <end>
         <li>
           <%= link_to("Notify-Pushとは", "/about") %>
         </li>
@@ -28,6 +33,10 @@
         </li>
         <li>
           <%= link_to("新規登録", "/signup") %>
+        </li>
+        <li>
+          <%= link_to("ログイン", "/login") %>
+        </li>
       </ul>
     </header>
 

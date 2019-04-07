@@ -1,5 +1,8 @@
 ja:
   activerecord:
+    models:
+      post:
+      user:
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
@@ -8,8 +11,8 @@ ja:
           has_many: "%{record}が存在しているので削除できません"
   attributes:
     post:
-     Title: タイトル
-     Content: 内容
+      title: タイトル
+      content: 内容
     user:
       user_id: ユーザーID
       email: Eメール
