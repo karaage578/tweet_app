@@ -1,12 +1,11 @@
 <div class="main user-show">
   <div class="container">
     <div class="user-info">
-    <img src="<%= "/user_images/#{@user.image_name}" %>"　align="left">
       <p>
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      
         <strong>Uesr_ID:</strong>
-        <%= @user.user_id %>
-      </p>
-      <p>
+        <%= @user.user_id %><br>
         <strong>Email:</strong>
         <%= @user.email %>
       </p>
