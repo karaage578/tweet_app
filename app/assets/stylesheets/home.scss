@@ -188,46 +188,54 @@ header {
 }
 
 .about-info p {
-  font-weight: 200;
+  font-weight: 400;
   font-size: 20px;
+  padding: 30px 0px 0px 0px;
+  float: left;
 }
 
 .about-top {
   font-weight: 200;
   font-size: 20px;
+  width: 35%;
+  margin: auto;
 }
 
 .about-top img {
   display: block;
   margin: auto;
   max-width: 150px;
-  max-height: 100px;
+  max-height: 150px;
   opacity: 0.8;
 }
 
 .about-middle {
   font-weight: 200;
   font-size: 20px;
+  width: 35%;
+  margin: auto;
 }
 
 .about-middle img {
   display: block;
   margin: auto;
   max-width: 150px;
-  max-height: 100px;
+  max-height: 150px;
   opacity: 0.8;
 }
 
 .about-bottom {
   font-weight: 200;
   font-size: 20px;
+  width: 35%;
+  margin: auto;
 }
 
 .about-bottom img {
   display: block;
   margin: auto;
   max-width: 150px;
-  max-height: 100px;
+  max-height: 150px;
   opacity: 0.8;
 }
 
@@ -238,7 +246,7 @@ header {
 
 .about-yj img {
   max-width: 150px;
-  max-height: 100px;
+  max-height: 150px;
   opacity: 0.8;
 }
 
