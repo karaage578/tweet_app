@@ -10,8 +10,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(title: params[:title],content: params[:content],url: params[:url])
-    @post.save
-    redirect_to("/posts/index")
+    if @post.save
+      flash[:notice] = "投稿を作成しました"
+      redirect_to("/posts/index")
+    else
+      render("/posts/new")
+    end
   end
 
   def show
