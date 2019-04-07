@@ -126,7 +126,7 @@ header {
   background-color: #3ecdc6;
   background-repeat: no-repeat;
   background-position: center 50%;
-  background-size: contain;
+  background-size: auto;
   background-image: url("/top.jpg");
 }
 
@@ -147,7 +147,7 @@ header {
 }
 
 .top-img {
-  display: flex;
+  display: block;
   margin: auto;
 }
 
