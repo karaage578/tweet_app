@@ -10,11 +10,11 @@
       <div class="form">
         <div class="form-body">
           <p>タイトル</p>
-          <textarea name="title"><%= @post.title %></textarea>
+          <input name="title" value="<%= @post.title %>">
           <p>内容</p>
           <textarea name="content"><%= @post.content %></textarea>
           <p>URL</p>
-          <textarea name="url"><%= @post.url %></textarea>
+          <input name="url" value="<%= @post.url %>">
           <%= submit_tag "保存", data: { confirm: "保存してもいいですか？" }  %>
         </div>
       </div>
