@@ -9,11 +9,13 @@
           </div>
         <% end %>
         
-        <%= form_tag("/users/#{@user.id}/update") do %>
+        <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
           <p>ユーザー名</p>
           <input name="user_id" value="<%= @user.user_id %>">
           <p>メールアドレス</p>
           <input name="email" value="<%= @user.email %>">
+          <p>画像</p>
+          <input name="image" type="file">
           <%= submit_tag "保存", data: { confirm: "保存してもいいですか？" }  %>
         <% end %>
       </div>
