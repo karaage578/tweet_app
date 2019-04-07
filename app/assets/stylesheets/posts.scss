@@ -142,7 +142,7 @@
     color: #920404;
   }
 
-  .textarea {
+  .form-body textarea {
     font-size: 20px;
     padding: 10px;
     min-height: 140px;
@@ -151,7 +151,7 @@
     background-color: rgba(255, 255, 255, 0);
   }
 
-  .textarea::-webkit-input-placeholder {
+  .form-body textarea::-webkit-input-placeholder {
     font-size: 24px;
     opacity: 0.5;
   }
