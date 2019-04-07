@@ -180,11 +180,21 @@ header {
   line-height: 1.4;
 }
 
-.about-main p {
+.about-info p {
   font-weight: 200;
   font-size: 20px;
 }
 
+.about-info img {
+  display: block;
+  margin: auto;
+}
+
+.about-yj {
+  display: block;
+  margin: auto;
+  
+}
 /* フォーム================================ */
 .form {
   max-width: 700px;
