@@ -114,20 +114,25 @@ header {
 }
 
 /* top ================================ */
+.top-bg {
+  background-color: #3ecdc6;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: contain;
+  background-image: url("/top.jpg");
+  height: 0;
+  padding-top: 66.61%
+}
+
 .top-main {
-  padding-top: 66.61%;
+  padding: 130px 0 100px;
   text-align: center;
   position: absolute;
   top: 0;
   width: 100%;
-  height: 0;
+  height: auto;
   min-height: 100%;
   color: white;
-  background-color: #3ecdc6;
-  background-repeat: no-repeat;
-  background-position: center 50%;
-  background-size: auto;
-  background-image: url("/top.jpg");
 }
 
 .top-message {
