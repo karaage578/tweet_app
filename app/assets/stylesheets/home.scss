@@ -187,6 +187,11 @@ header {
   line-height: 1.4;
 }
 
+.about-info {
+  display: flex;
+  flex-flow: column;
+}
+
 .about-info p {
   font-weight: 400;
   font-size: 20px;
@@ -199,6 +204,8 @@ header {
   font-size: 20px;
   width: 35%;
   margin: auto;
+  display: flex;
+  flex-flow: row;
 }
 
 .about-top img {
@@ -215,6 +222,8 @@ header {
   font-size: 20px;
   width: 35%;
   margin: auto;
+  display: flex;
+  flex-flow: row;
 }
 
 .about-middle img {
@@ -231,6 +240,8 @@ header {
   font-size: 20px;
   width: 35%;
   margin: auto;
+  display: flex;
+  flex-flow: row;
 }
 
 .about-bottom img {
