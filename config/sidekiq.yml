@@ -1,4 +1,4 @@
 :schedule:
   ifttt_sidekiq:
-    cron: '0 0 7-20 * * *' 
+    cron: '0 0 7-20 * * * Asia/Tokyo'
     class: IftttSidekiqJob

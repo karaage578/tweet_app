@@ -1,22 +1,27 @@
 ja:
   activerecord:
     models:
-      post:
-      user:
+      post: 投稿情報
+      user: ユーザー情報
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
-  attributes:
-    post:
-      title: タイトル
-      content: 内容
-    user:
-      user_id: ユーザーID
-      email: Eメール
-      password: パスワード
+    attributes:
+      post:
+        title: タイトル
+        content: 内容
+      user:
+        user_id: ユーザーID
+        email: Eメール
+        password: パスワード
+  enums:
+      post:
+        delivery_void_flag:
+          effective: 配信停止
+          void: 配信する
   date:
     abbr_day_names:
     - 日

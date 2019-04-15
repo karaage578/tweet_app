@@ -42,6 +42,9 @@ gem 'sidekiq-scheduler'
 # ページネーション機能
 gem 'kaminari', '~> 0.17.0'
 
+# enum日本語化
+gem 'enum_help'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

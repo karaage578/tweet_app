@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user, {only: [:new, :create, :edit, :update, :destroy]}
+  before_action :authenticate_user, {only: [:new, :create, :edit, :update, :destroy, :delivery_void_flag_change]}
   
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(title: params[:title],content: params[:content],url: params[:url])
+    @post = Post.new(title: params[:title],content: params[:content],url: params[:url],delivery_void_flag: 0)
     if @post.save
       flash[:notice] = "投稿を作成しました"
       redirect_to("/posts/index")
@@ -45,5 +45,26 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @post.destroy
     redirect_to("/posts/index")
+  end
+
+  def delivery_void_flag_change
+    @post = Post.find_by(id: params[:id])
+    if @post.delivery_void_flag == "effective"
+      @post.delivery_void_flag = 1
+      if @post.save
+        flash[:notice] = "配信を停止しました"
+        redirect_to("/posts/index")
+      else
+        render("/posts/#{@post.id}")
+      end
+    else
+      @post.delivery_void_flag = 0
+      if @post.save
+        flash[:notice] = "配信リストに追加しました"
+        redirect_to("/posts/index")
+      else
+        render("/posts/#{@post.id}")
+      end
+    end
   end
 end

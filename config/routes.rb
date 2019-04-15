@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   post "posts/create" => "posts#create"
   get "posts/:id/edit" => "posts#edit"
   post "posts/:id/update" => "posts#update"
+  post "posts/:id/delivery" => "posts#delivery_void_flag_change"
   resources :posts, only: [:destroy]
   
   get "/" => "home#top"
