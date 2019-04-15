@@ -17,7 +17,6 @@
         <%= @post.created_at %>
       </div>
       <div class="post-menus">
-        <% #<%= link_to("#{@post.delivery_void_flag_i18n}", "/posts/#{@post.id}/delivery", method: :post) %> %>
         <%= link_to("編集", "/posts/#{@post.id}/edit") %>
         <%= link_to '削除', post_path, method: :delete, data: {confirm: 'この投稿を削除しますか？'} %>
       </div>
